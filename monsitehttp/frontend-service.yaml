@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-simple-site
+spec:
+  type: NodePort  # You can use NodePort for external access
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: my-simple-site
